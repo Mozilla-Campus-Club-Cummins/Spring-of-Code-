@@ -1,64 +1,30 @@
+#Implementing the gradient descent algo
+#----------------------------------------
+
+import math, copy
 import numpy as np
 import matplotlib.pyplot as plt
 
-# plt.style.use('./deeplearning.mplstyle')
+#-----------------------------------------------------------------------------
+#training data set
 
-# input
-x_train = np.array([1.0, 1.7, 2.0, 2.5, 3.0, 3.2])
-y_train = np.array(
-    [
-        250,
-        300,
-        480,
-        430,
-        630,
-        730,
-    ]
-)
+# Load our data set
+x_train = np.array([1.0, 2.0])   #features
+y_train = np.array([300.0, 500.0])   #target value
 
-m = len(x_train)
+#----------------------------------------------------------------
 
-# Plot the data points
-plt.scatter(x_train, y_train, marker="x", c="r")
-# Set the title
-plt.title("Housing Prices")
-# Set the y-axis label
-plt.ylabel("Price (in Lakhs of Rupees)")
-# Set the x-axis label
-plt.xlabel("Size (1000 sqft)")
-
-
-w = 175
-b = 200
-
-
-# to find the predicted points
-def compute_model_output(x, w, b):
-    m = x.shape[0]
-    f_wb = np.zeros(m)
+#Function to calculate the cost (J)
+def compute_cost(x, y, w, b):
+   
+    m = x.shape[0] 
+    cost = 0
+    
     for i in range(m):
-        f_wb[i] = w * x[i] + b
+        f_wb = w * x[i] + b
+        cost = cost + (f_wb - y[i])**2
+    total_cost = 1 / (2 * m) * cost
 
-    return f_wb
+    return total_cost
 
-
-predicted_y = compute_model_output(
-    x_train,
-    w,
-    b,
-)
-
-# Plot our model prediction
-plt.plot(x_train, predicted_y, c="b", label="Prediction")
-
-# Plot the data points
-plt.scatter(x_train, y_train, marker="x", c="r", label="Actual Values")
-
-# Set the title
-plt.title("Housing Prices")
-# Set the y-axis label
-plt.ylabel("Price (in Lakhs of rupees)")
-# Set the x-axis label
-plt.xlabel("Size (1000 sqft)")
-plt.legend()
-plt.show()
+#------------------------------------------------------------------
