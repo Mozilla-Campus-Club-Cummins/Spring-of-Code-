@@ -1,3 +1,6 @@
+//issue number#24
+//You are given two integers m and n, and you need to find all the prime numbers between these m and n
+
 package Prime_Numbers;
 import java.util.*;
 
