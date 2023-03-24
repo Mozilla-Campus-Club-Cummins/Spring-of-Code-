@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+
+void strtolwrcase(char*);//function declaration
+
+int main()
+{
+	char arr[50] = { '\0' };
+	printf("Enter any string\n");
+	scanf_s("%[^\n]", arr);
+
+	strtolwrcase(arr);
+	
+	printf("%s\n", arr);
+	fflush(stdout);
+	return 0;
+
+}
+
+void strtolwrcase(char *p)
+{
+	if (p == NULL)
+		return;
+	while (*p != '\0')
+	{
+		if (*p >= 'A' && *p <= 'Z')
+			*p = *p + 32;
+
+		p++;
+	}
+}
