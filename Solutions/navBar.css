@@ -1,0 +1,65 @@
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    list-style: none;
+    margin: 0 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  }
+
+/*Add a black background color to the top navigation*/
+.topNav{
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+} 
+
+  /* Style the links inside the navigation bar */
+.topNav a{
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+} 
+
+  /* Change the color of links on hover */
+  .topNav a:hover {
+     background-color: #7bcfc4;
+    color: rgb(255, 255, 255);
+  } 
+
+    /* An active class to highlight the current page */
+     .topNav a.active {
+        background-color: #00586e;
+        color: rgb(255, 255, 255);
+      }
+
+    /* Hide the link that should open and close the topnav on small screens */
+    .topNav .icon {
+    display: none;
+    }
