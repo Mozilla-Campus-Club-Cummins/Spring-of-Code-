@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[100][100], row, col, even=0, odd=0;
+    
+    cout<<"Enter No. of Rows: ";
+    cin>>row;
+    
+    cout<<"Enter No. of Columns: ";
+    cin>>col;
+    cout<<endl;
+    
+    for(int i=0; i<row; i++)
+    {
+        for(int j=0; j<col; j++)
+        {
+            cout<<"Enter a"<<i+1<<j+1<<" element: ";
+            cin>>a[i][j];
+        }
+    }
+    
+    for(int i=0; i<row; i++)
+    {
+        for(int j=0; j<col; j++)
+        {
+            if(a[i][j] % 2 == 0)
+            {
+                even++;
+            }
+            
+            else
+            {
+                odd++;
+            }
+        }
+    }
+    
+    cout<<endl;
+    cout<<"Frequency of Even Nos. in given Matrix is: "<<even<<endl;
+    cout<<"Frequency of Odd Nos. in given Matrix is: "<<odd;
+    
+    return 0;
+}
