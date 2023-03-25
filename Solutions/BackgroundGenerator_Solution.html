@@ -1,0 +1,183 @@
+<!-- Project Name :- Background Generator
+Made by :- Rasika Rajendra Kanitkar -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background generator</title>
+    <!-- linking google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Css */
+
+      body {
+        text-align: center;
+        font-family: "Roboto Slab", serif;
+      }
+
+      #heading1 {
+        color: rgb(7, 7, 43);
+        font-size: 60px;
+      }
+      #heading2 {
+        color: chartreuse;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .buttons button {
+        width: 400px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-size: larger;
+        border-width: 10px;
+        border-radius: 5px;
+        border-style: hidden;
+      }
+      .buttons button:hover {
+        background-color: #443f3f;
+      }
+
+      .container {
+        height: 50px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .container .color-palette {
+        list-style: none;
+        align-items: center;
+      }
+      input {
+        width: 80px;
+        height: 70px;
+        margin: 10px;
+        border-radius: 2px black solid;
+        border-style: none;
+      }
+      footer {
+        font-size: medium;
+        margin-top: 20%;
+        text-align: center;
+        align-items: center;
+      }
+      footer div {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        width: 40%;
+        height: 40px;
+        margin: auto;
+        padding-top: 10px;
+        border: 2px solid rgb(193, 161, 161);
+        border-radius: 20px;
+      }
+      footer div b {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body class="Body">
+    <!-- creating main heading -->
+    <h1 id="heading1">Background color generator</h1>
+
+    <!-- creating buttons for adding and removing an input color -->
+    <div class="buttons">
+      <button id="but1">Add a color for gradient</button>
+      <button id="but2">Remove a color for gradient</button>
+    </div>
+
+    <!-- container for inputs -->
+    <div class="container">
+      <ul class="color-palette">
+        <input class="color1" type="color" value="#AACEFD" />
+      </ul>
+    </div>
+
+    <!-- guide note section for users -->
+    <footer>
+      <div>
+        <b>Choose a color and click on outside to get the effect!</b>
+      </div>
+    </footer>
+
+    <script>
+      // javascript
+
+      //   creating dom elements for usage
+      var body = document.querySelector(".Body");
+      var addColorButton = document.querySelector("#but1");
+      var removeColorButton = document.querySelector("#but2");
+      var list = document.getElementsByTagName("ul")[0];
+      const input = document.querySelector("input");
+      var inputs = list.getElementsByTagName("input");
+
+      //   pre-loader for setting the background to some color
+      document.addEventListener("DOMContentLoaded", function () {
+        changeColor();
+      });
+
+      //This function does the changes for the gradient color calculation for many inputs
+      //if the length of the inputs(no of inputs) is 1,it sets to some initial value
+      //otherwise appends the color codes to a string str and sets it to background
+      //linear-gradient css function to right is applied here
+
+      function changeColor() {
+        if (inputs.length == 1) {
+          body.style.background = inputs[0].value;
+        }
+        var str = "linear-gradient(to right,";
+        for (index = 0; index < inputs.length; ++index) {
+          if (index == inputs.length - 1) {
+            str += inputs[index].value;
+          } else {
+            str += inputs[index].value + ",";
+          }
+        }
+        str += ")";
+        body.style.background = str;
+      }
+
+      //   This function creates a new input when added on it and
+      //   then calls the changeColor function..
+      //   Allowed length for inputs is 6
+
+      var addInput = function () {
+        if (inputs.length != 6) {
+          var newInput = document.createElement("input");
+          //   input.id = "color" + counter;
+          newInput.type = "color";
+          newInput.value = "#ffffff";
+          newInput.addEventListener("change", changeColor);
+          list.appendChild(newInput);
+        }
+      };
+
+      //This function removes the inputs when clicked on it.
+      //   It cannot remove if no. of inputs is 1 , because atleast one input should be there
+
+      var removeInput = function () {
+        if (inputs.length != 1) {
+          list.removeChild(list.lastElementChild);
+          changeColor();
+        }
+      };
+
+      //Applying the functions on the buttons, and when event occurs , it triggers it
+      addColorButton.addEventListener("click", addInput);
+      removeColorButton.addEventListener("click", removeInput);
+
+      // Finally , we are again and again by applying
+      // the changeColor function whenever an input value is changed
+
+      input.addEventListener("change", changeColor);
+    </script>
+  </body>
+</html>
