@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class AddyBuilder {
+	
+	public static double findArea(int X, int Y)
+	{
+		//to find out a large square, we need to have small squares in quantity of
+		//perfect square, thus we need to nullify some squares
+		//taking squareroot of given number of squares and checking for nearest(less) integer
+		//and then taking its square to get exact number of squares needed for large square
+		double sqroot = (int) Math.sqrt(X);
+		
+		//finding out maximum area
+		double maxArea = sqroot * sqroot* (Y * Y);
+		
+		return maxArea;
+		
+	}
+	
+	public static void main(String args[])
+	{
+		Scanner inp = new Scanner(System.in);
+		
+		int t = inp.nextInt(); //no. of testcases
+		
+		for(int i = 0 ; i < t ; i++)
+		{
+			int x = inp.nextInt();//no. of squares
+			int y = inp.nextInt();//length of side of square
+			System.out.println(findArea(x,y));
+			
+		}
+		
+		inp.close();
+	}
+
+}

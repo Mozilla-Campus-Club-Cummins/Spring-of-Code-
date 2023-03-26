@@ -1,0 +1,58 @@
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    text-align: center;
+    width: 700px;
+    padding: 10px;
+    border: 1px solid rgb(147, 147, 185);
+    margin-bottom: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: rgb(218, 237, 248);
+}
+.text h1{
+    padding:10px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.text p{
+    padding:8px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(105, 105, 255);
+}
+.text p span{
+    font-size: 18px;
+    color: rgb(43, 43, 101);
+}
+
+#gsci{
+margin: 15px;
+font-size: 20px;
+}
+#csci{
+    margin: 15px;
+    font-size: 20px;
+}
+.ques{
+    /* border: 0.5px dotted black; */
+    padding: 10px;
+    width: 600px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: rgb(252, 250, 168);
+
+}
+.ques h4{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+}
+.ques label{
+    font-size: 18px;
+    padding-left: 20px;
+}

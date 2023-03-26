@@ -1,0 +1,41 @@
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: #A5C9CA;
+}
+
+h3 {
+  margin: 30px;
+  font-family: 'Handlee', cursive;
+  text-shadow: 5px 0 #395B64;
+  font-size: 5rem;
+  color: #E7F6F2;
+}
+
+p {
+  font-size: 2rem;
+  color: #E7F6F2;
+font-family: 'Merienda', cursive;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Handlee', cursive;
+
+}

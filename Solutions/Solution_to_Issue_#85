@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cafe Order Form</title>
+	<style>
+		body {
+
+
+background-image:url('cafe.jpg');
+
+		}
+
+	</style>
+</head>
+<body>
+	<h1 style="color:blue;">Selena's Cafe</h1>
+       <h2 style="color:white;"> Hey! I am Selena. If you are interested in my business,please fill the following form to allow me to understand your requirement and to contact you.</h2>
+
+
+	<form action="submit.php" method="post">
+		<label for="contact"><b>Contact No:</b></label>
+		<input type="tel" id="contact" name="contact" required><br><br>
+		
+		<label for="date"><b>Date of Party:</b></label>
+		<input type="date" id="date" name="date" required><br><br>
+		
+		<label for="address"><b>Address:</b></label>
+		<textarea id="address" name="address" rows="3" required></textarea><br><br>
+		
+		<label for="email"><b>Email:</b></label>
+		<input type="email" id="email" name="email" required><br><br>
+		
+		<label for="message"><b>Special Message:</b></label>
+		<textarea id="message" name="message" rows="5"></textarea><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

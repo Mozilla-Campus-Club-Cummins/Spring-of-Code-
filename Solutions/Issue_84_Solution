@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client Skills and Ratings</title>
+	<style>
+body{
+                 background-image:url('image2.jpg');
+
+}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		.stars {
+			display: inline-block;
+			font-size: 20px;
+			color: #ffd700;
+		}
+		.full-star:before {
+			content: "\2605";
+		}
+		.half-star:before {
+			content: "\2605";
+			position: relative;
+			left: -10px;
+			color: #eee;
+		}
+	</style>
+</head>
+<body>
+
+<h1> Shreya's Resume </h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Skills</th>
+				<th>Ratings</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Web Development</td>
+				<td>
+					<div class="stars">
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="half-star"></span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Graphic Design</td>
+				<td>
+					<div class="stars">
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="half-star"></span>
+						<span class="empty-star"></span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Content Writing</td>
+				<td>
+					<div class="stars">
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+					</div>
+				</td>
+			</tr>
+   <tr>
+     <td>Programming</td>
+     <td>
+<div class="stars">
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="empty-star"></span>
+						<span class="empty-star"></span>
+					</div></td>
+   </tr>
+<tr>
+<td>Dancing</td>
+      <td><div class="stars">
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="empty-star"></span>
+						<span class="empty-star"></span>
+						<span class="empty-star"></span>
+					</div></td>
+    </tr>
+<tr>
+      <td>Singing</td>
+      <td><div class="stars">
+						<span class="full-star"></span>
+						<span class="empty-star"></span>
+						<span class="empty-star"></span>
+						<span class="empty-star"></span>
+						<span class="empty-star"></span>
+					</div></td>
+    </tr>
+<tr>
+      <td>Public Speaking</td>
+      <td>
+<div class="stars">
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+						<span class="full-star"></span>
+					</div></td>
+    </tr>
+		</tbody>
+	</table>
+</body>
+</html>
