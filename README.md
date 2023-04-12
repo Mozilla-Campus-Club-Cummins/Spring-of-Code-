@@ -4,9 +4,6 @@
 
 
 
-![mozilla x asme](https://user-images.githubusercontent.com/81237390/228042710-a49e1406-d012-4e52-b072-d0f0fa40a8b0.png)
-
-
 ## **About us**
 
 Mozilla Campus Club CCEW is a student committee working to spread awareness on Open Source software. We organize webinars and workshops on different technical topics and making Open Source contributions.
